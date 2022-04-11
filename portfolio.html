@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">                
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>Malcolm Costa</title>        
+<ul class="menuPrincipal">                                
+    <li><a href="//linkedin.com/in/malcolmcosta/" target="_blank"><img class="smalLink" src="./img/linkedin01.png"></a></li>
+    <li><a href="//www.instagram.com/malcolm7xd/" target="_blank"><img class="smalLink" src="./img/instagram01.png"></a></li>
+    <li><a href="contato.html">CONTATO</a></li>
+    <li><a class="active" href="portfolio.html">PORTFÓLIO</a></li>
+    <li><a href="index.html">APRESENTAÇÃO</a></li>
+    <li style="float: left"><a href="index.html" ><img class="smallLogo" src="./img/logo.png"></a></li>
+</ul>
+</head>
+<body onload="filterSelection('all')">
+<div class="bloco02">
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">ALL</button>
+        <button class="btn" onclick="filterSelection('design')">DESIGN</button>
+        <button class="btn" onclick="filterSelection('ilustracao')">ILUSTRAÇÃO</button>
+        <button class="btn" onclick="filterSelection('3d')">3D</button>
+        <button class="btn" onclick="filterSelection('animacao')">ANIMAÇÃO</button>
+    </div>
+</div>
+<div class="bloco02">
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+<!-- Itens de design -->
+    <div class="column design">
+        <div class="content">
+            <a href="01desAWinvestimentos.html"><img src="pag/design/01AWinvestimentos/01AWinvestimentosThumb.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>                    
+    <div class="column design">
+        <div class="content">
+            <a href="02descidadaoItaliano.html"><img src="pag/design/02cidadaoItaliano/02cidadaoItaliano.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>                               
+    <div class="column design">
+        <div class="content">
+            <a href="03deseduardoGarcia.html"><img src="pag\design\03eduardoGarcia\03eduardoGarciaThumb.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>
+<!-- Itens de ilustração -->                         
+    <div class="column ilustracao">
+        <div class="content">
+            <a href="01iluAnimais.html"><img src="pag\ilustracao\01animais\01.png" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>                        
+    <div class="column ilustracao">
+        <div class="content">
+            <a href="02iluQuebecEmFoco.html"><img src="pag\ilustracao\02quebecEmFoco\02quebecEmFocoThumb.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>
+    <div class="column ilustracao">
+        <div class="content">
+            <a href="03iluTigreChocado.html"><img src="pag\ilustracao\03tigreChocado\03tigreChocado.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>
+    <div class="column ilustracao">
+        <div class="content">
+            <a href="04iluLED.html"><img src="pag\ilustracao\04LED\04LEDThumb.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div> 
+    <div class="column ilustracao design">
+        <div class="content">
+            <a href="05iluMascote.html"><img src="pag\ilustracao\06mascote\06MascoteThumb.jpg" alt="Design img" style="width:100%"></a>
+        </div>
+    </div>
+<!-- Itens 3D -->
+        <div class="column 3d animacao">
+            <div class="content">
+                <a href="01dAnimacaoMasterRoom.html"><img src="pag\3d\01animacaoMasterRoom\01animacaoMasterRoomThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>  
+        <div class="column 3d animacao">
+            <div class="content">
+                <a href="02dEnteiKid.html"><img src="pag\3d\02enteiKid\02enteiKidThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>                                                  
+        <div class="column 3d">
+            <div class="content">
+                <a href="03dMoeda.html"><img src="pag\3d\03moeda\03moedaThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>
+        <div class="column 3d">
+            <div class="content">
+                <a href="04dCasa.html"><img src="pag\3d\04casa\04casaThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>                 
+        <div class="column 3d">
+            <div class="content">
+                <a href="05dNome.html"><img src="pag\3d\05nome\05nomeThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>
+        <div class="column 3d animacao">
+            <div class="content">
+                <a href="06dAnimacaoNilo.html"><img src="pag\3d\06animacaoNilo\06animacaoNiloThumb.jpg" alt="Design img" style="width:100%"></a>
+            </div>
+        </div>
+<!-- END ROW -->
+    </div>                      
+<!-- END GRID -->
+    </div>     
+<!-- END bloco -->
+    </div>
+    <script>        
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName('column');
+            if (c == 'all') c = '';
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], 'show');
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], 'show');
+            }
+        }
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(' ');
+            arr2 = name.split(' ');
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += ' ' + arr2[i]; }
+            }
+        }
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(' ');
+            arr2 = name.split(' ');
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(' ');
+        }
+        const btns = document.querySelectorAll('.btn');
+        btns.forEach((item, idx) => {  
+            item.addEventListener('click', () => {
+                item.className = 'btn active';
+                btns.forEach((item, index) => {
+                    if(idx !== index){
+                        item.classList.remove('active');
+                    }
+                });
+                this.className = 'btn active';
+            });
+        });
+    </script>
+</body>
+<footer>            
+        ©
+        <span id="copyright">
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>        
+        MALCOLM COSTA
+        </span>    
+</footer>
+</html>
